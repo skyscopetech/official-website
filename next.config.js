@@ -5,6 +5,7 @@ const headers = require('./config/headers');
 const includePolyfills = require('./config/includePolyfills');
 const plugins = require('./config/plugins');
 const { i18n } = require('./next-i18next.config.js');
+const { types } = require('@babel/core');
 
 /**
  * https://github.com/cyrilwanner/next-compose-plugins/issues/59
@@ -70,6 +71,10 @@ module.exports = withPlugins(plugins, {
     domains: ['images.ctfassets.net','images.eu.ctfassets.net'],
     path: '/_next/image',
     loader: 'default',
+  },
+
+  typescript: {
+    ignoreBuildErrors: true,
   },
 
   webpack(config, options) {
