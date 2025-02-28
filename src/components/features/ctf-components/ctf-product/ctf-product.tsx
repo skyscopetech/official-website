@@ -13,10 +13,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   innerIntroContainer: {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    maxWidth: '126rem',
-    padding: theme.spacing(19, 0, 19),
+    marginLeft: 100,
+    marginRight: 0,
+    width: '100%',
+    padding: theme.spacing(10, 0, 10),
     [theme.breakpoints.up('md')]: {
       alignItems: 'center',
       flexDirection: 'row',
@@ -26,10 +26,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   innerBody: {
     order: 2,
     width: '100%',
-
-    [theme.breakpoints.up('md')]: {
-      width: 'calc(50% - 2.5rem)',
-    },
   },
   headline: {
     fontSize: '3.2rem',
@@ -44,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontWeight: 400,
     lineHeight: 1.52,
     marginTop: theme.spacing(7),
-    maxWidth: '51rem',
+    maxWidth: '151rem',
 
     '& p': {
       fontSize: '2rem',
@@ -105,12 +101,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginBottom: theme.spacing(4),
     marginTop: 0,
     color: '#414D63',
+    width: '200px', // Set a fixed width
+    wordWrap: 'break-word', // Ensure text wraps within the fixed width
     [theme.breakpoints.up('md')]: {
       flexGrow: 1,
       flexShrink: 0,
       marginBottom: theme.spacing(10),
       marginRight: theme.spacing(10),
-      width: 'auto',
+      width: '200px', // Set a fixed width for larger screens as well
     },
   },
   featureValue: {

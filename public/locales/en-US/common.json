@@ -13,14 +13,14 @@
     "month": "Month"
   },
   "socials": {
-    "findUsOn": "Find us on",
+    "findUsOn": "Social",
     "twitter": "Twitter",
     "facebook": "Facebook",
     "linkedin": "LinkedIn",
     "instagram": "Instagram"
   },
   "legal": {
-    "copyright": "© Copyright {{ year }}"
+    "copyright": "© Copyright {{ year }} Sky Scope Tech"
   },
   "error": {
     "code": "{{code}} error",

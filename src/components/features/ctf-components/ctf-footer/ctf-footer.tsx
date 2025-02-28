@@ -1,6 +1,6 @@
 import { useContentfulInspectorMode } from '@contentful/live-preview/react';
-import Facebook from '@mui/icons-material/Facebook';
-import Instagram from '@mui/icons-material/Instagram';
+// import Facebook from '@mui/icons-material/Facebook';
+// import Instagram from '@mui/icons-material/Instagram';
 import LinkedIn from '@mui/icons-material/LinkedIn';
 import Twitter from '@mui/icons-material/Twitter';
 import { Theme, Container, Typography } from '@mui/material';
@@ -304,10 +304,6 @@ export const CtfFooter = (props: FooterFieldsFragment) => {
       <Container maxWidth={false} className={classes.footerCorporateContainer}>
         <section className={classes.footerCorporate}>
           <div className={classes.corporateLogoMenu}>
-            <div className={classes.corporateLogoContainer}>
-              <Logo className={classes.corporateLogo} />
-            </div>
-
             <section className={classes.copyrightAndLegal}>
               <p className={classes.copyright}>
                 {t('legal.copyright', { year: new Date().getFullYear() })}
@@ -339,7 +335,7 @@ export const CtfFooter = (props: FooterFieldsFragment) => {
                     <Twitter />
                   </a>
                 )}
-                {footerContent?.facebookLink && (
+                {/* {footerContent?.facebookLink && (
                   <a
                     href={footerContent.facebookLink}
                     title={t('socials.facebook')}
@@ -348,7 +344,7 @@ export const CtfFooter = (props: FooterFieldsFragment) => {
                   >
                     <Facebook />
                   </a>
-                )}
+                )} */}
                 {footerContent?.linkedinLink && (
                   <a
                     href={footerContent.linkedinLink}
@@ -359,7 +355,7 @@ export const CtfFooter = (props: FooterFieldsFragment) => {
                     <LinkedIn />
                   </a>
                 )}
-                {footerContent?.instagramLink && (
+                {/* {footerContent?.instagramLink && (
                   <a
                     href={footerContent.instagramLink}
                     title={t('socials.instagram')}
@@ -368,7 +364,7 @@ export const CtfFooter = (props: FooterFieldsFragment) => {
                   >
                     <Instagram />
                   </a>
-                )}
+                )} */}
               </div>
             </div>
           </div>

@@ -10,8 +10,8 @@ import { BusinessInfoFieldsFragment } from './__generated/business-info.generate
 import { CtfRichtext } from '@src/components/features/ctf-components/ctf-richtext/ctf-richtext';
 
 const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    paddingBottom: theme.spacing(18),
+  root: (props: BusinessInfoFieldsFragment) => ({
+    paddingBottom: props.name === 'Contact Us' ? 0 : theme.spacing(18),
     paddingTop: (props: BusinessInfoFieldsFragment) =>
       props.name || props.shortDescription ? 0 : theme.spacing(18),
     '& .MuiContainer-root + .ComponentInfoBlock': {
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     '& .ComponentInfoBlock + .MuiContainer-root': {
       marginTop: theme.spacing(18),
     },
-  },
+  }),
   container: {
     marginRight: 'auto',
     marginLeft: 'auto',
@@ -31,10 +31,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginLeft: 'auto',
     maxWidth: '77rem',
   },
-  hero: {
-    marginBottom: theme.spacing(18),
+  hero: (props: BusinessInfoFieldsFragment) => ({
+    marginBottom: props.name === 'Contact Us' ? 0 : theme.spacing(18),
     position: 'relative',
-  },
+  }),
   heroBg: {
     backgroundColor: '#000',
     backgroundPosition: 'center center',
@@ -84,6 +84,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   subtitle: {
     fontSize: '2.5rem',
     marginTop: theme.spacing(3),
+    whiteSpace: 'pre-line',
   },
 }));
 

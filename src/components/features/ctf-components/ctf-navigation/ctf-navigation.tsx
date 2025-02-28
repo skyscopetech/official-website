@@ -26,6 +26,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginRight: theme.spacing(8),
     position: 'relative',
 
+    whiteSpace: 'nowrap', // Prevent text wrapping
+    flexShrink: 0, // Prevent shrinking
     [theme.breakpoints.up('lg')]: {
       marginRight: theme.spacing(10),
     },
